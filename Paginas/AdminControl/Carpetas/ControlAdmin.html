@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVINITE-ControlAdministrativo</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="TEST.CSS">
+    <link rel="stylesheet" href="NavbarAdmin.css">
+    <link rel="stylesheet" href="FooterAdmin.css">
+    <!-- Logocabecera -->
+    <link rel="shortcut icon" href="/Imagenes/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Js-->
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+    <script src="/ControlAdmin/CarpetaJS/FetchUsuarios.js"></script>
+    <script src="/ControlAdmin/CarpetaJS/ServiciosCRUD.js"></script>
+
+
+</head>
+
+<body>
+  <div class="grid">
+<!-- ingresar codigo de navbar  -->
+<div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+          <a href="#">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+          </a>
+      </div><!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2">
+        <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
+        <span></span>
+        </div><!--nav-links2 -->
+        <div class="headerr-btn">
+          <a class = "active" href="#"></a><i class="fas fa-undo"></i></a></div>
+    </div>
+      </div><!--n3 -->
+</div><!-- navbar -->
+
+<!-- ingresar codigo Controlservicios  -->
+<div class="content">
+<div class="ContenidoControl">
+    <!--NAVEGACION-->
+    <nav class="Titulito">
+        <div class="nav nav-tabs NavCambio" id="nav-tab" role="tablist" style="justify-content: space-around; margin-top: 2%;">
+
+            <button class="nav-link active disñoNavBar" id="nav-home-tab" data-bs-toggle="tab"
+                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                aria-selected="true">Servicios</button>
+
+            <button class="nav-link disñoNavBar" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Añadir Servicio</button>
+
+            <button class="nav-link disñoNavBar" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Añadir Usuario</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <!--SERVICIO-->
+        <div class="tabpane1 tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="overflow-auto" style="height: 540px;">
+            <table class="table table-hover" id="Tabla-Usuarios" style="width: 96%; text-align: center; margin: auto;">
+                <thead>
+                    <tr>
+                        <th scope="col">Cliente ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Código canjeado</th>
+                        <th scope="col">Télefono</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Cumpleaños</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Reservado</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <!--SERVICIO-->
+
+        <!--AÑADIR SERVICIO-->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <!-- Inicio CRUD Servicios -->
+            <nav>
+                <div class="Titulito2 nav nav-tabs" id="nav-tab" role="tablist"
+                    style="justify-content: space-around; margin-top: 2%;">
+                    <button class="nav-link active disñoNavBar" id="nav-home-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-home1" type="button" role="tab" aria-controls="nav-home"
+                        aria-selected="true">Añadir Servicios</button>
+                    <button class="nav-link disñoNavBar" id="nav-profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-profile1" type="button" role="tab" aria-controls="nav-profile"
+                        aria-selected="false">Editar Servicio</button>
+                </div>
+            </nav>
+
+            <!-- Añadir Servicios -->
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 ContenedorAS">
+                                <!-- Inicio del form addServices -->
+                                <form>
+                                    <div class="mb-3 ">
+                                        <label for="exampleInputName" class="form-label AST1">Nombre del producto:</label>
+                                        <input type="text" class="form-control " id="exampleInputName"
+                                            placeholder="Ingrese el nombre del producto" autofocus>
+                                    </div>
+                                    <div class="mb-3 ">
+                                        <label for="exampleInputClas" class="form-label AST2">Clasificación:</label>
+                                        <input type="text" class="form-control " id="exampleInputClas"
+                                            placeholder="Clasificación del producto" autofocus>
+                                    </div>
+                                    <div class="mb-3 ">
+                                        <label for="exampleInputDescription" class="form-label AST3">Descripción del
+                                            producto:</label>
+                                        <input type="text" class="form-control " id="exampleInputDescription"
+                                            placeholder="Descripción">
+                                    </div>
+                                    <div class="mb-3 ">
+                                        <label for="exampleImputDuration" class="form-label AST4">Duración:</label>
+                                        <input type="text" class="form-control " id="exampleImputDuration"
+                                            placeholder="Duración en minutos (e.j. 60)">
+                                    </div>
+                                    <div class="mb-3 ">
+                                        <label for="exampleInputPrice" class="form-label AST5">Costo:</label>
+                                        <input type="text" class="form-control " id="exampleInputPrice"
+                                            placeholder="Costo del producto (e.j. 270)">
+                                    </div>
+                                    <div class="mb-3 ">
+                                        <label for="exampleInputImage" class="form-label AST6">Imagen:</label>
+                                        <input type="text" class="form-control " id="exampleInputImage"
+                                            placeholder="Link de la imagen">
+                                    </div>
+                                    <div class="mb-3 ASBtn">
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="Crear">Crear</button>
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="eliminar">Eliminar</button>
+                                    </div>
+                                    <div class="mb-3 ASBtn">
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="mostrar">Mostrar</button>
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="ocultar">Ocultar</button>
+                                    </div>
+                                </form>
+                                <!-- Fin del form addServices -->
+                            </div>
+                            <div class="col-8 ">
+                                <!--  div to show the cards -->
+                                <div class="container ContenedorAS2" style="margin-top: 20px; margin-bottom: 20px;">
+                                    <div class="row row-cols-1 row-cols-md-2 g-4"
+                                        style=" max-height: 550px; width: 98%; margin-left: 1%; margin-right: 1%; overflow-y: scroll;"
+                                        id="list-items">
+                                    </div>
+                                </div>
+                                <!-- End show cards -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Añadir servicios -->
+
+                <!-- Editar servicios -->
+                <div class="tab-pane fade" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <!-- Inicio del form EditServices -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="searchService" class="form-label AST1">Ingrese el servicio a
+                                            buscar:</label>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control col-md-5" id="searchService"
+                                                    placeholder="ID del servicio" style="margin-top: 0;">
+                                            </div>
+                                            <div class="col-md-5 ASBtn">
+                                                <button type="button" class="btn btn-primary"
+                                                    id="buscar">Buscar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputName1" class="form-label">Nombre del producto:</label>
+                                        <input type="text" class="form-control" id="exampleInputName1"
+                                            placeholder="Ingrese el nombre del producto" autofocus>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputClas1" class="form-label">Clasificación:</label>
+                                        <input type="text" class="form-control" id="exampleInputClas1"
+                                            placeholder="Clasificación del producto" autofocus>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputDescription1" class="form-label">Descripción del
+                                            producto:</label>
+                                        <input type="text" class="form-control" id="exampleInputDescription1"
+                                            placeholder="Descripción">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleImputDuration1" class="form-label">Duración:</label>
+                                        <input type="text" class="form-control" id="exampleImputDuration1"
+                                            placeholder="Duración del servicio">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPrice" class="form-label">Costo:</label>
+                                        <input type="text" class="form-control" id="exampleInputPrice1"
+                                            placeholder="Costo del producto">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputImage" class="form-label">Imagen:</label>
+                                        <input type="text" class="form-control" id="exampleInputImage1"
+                                            placeholder="Link de la imagen">
+                                    </div>
+                                    <div class="mb-3 ASBtn">
+                                        <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="editar">Editar</button>
+                                    </div>
+                                </form>
+                                <!-- Fin del form EditServices -->
+                            </div>
+                            <div class="col-8">
+                                <!--  div to show the cards -->
+                                <div class="container ContenedorAS2" style="margin-top: 20px; margin-bottom: 20px;">
+                                    <div class="row row-cols-1 row-cols-md-2 g-4"
+                                        style=" max-height: 550px; width: 98%; margin-left: 1%; margin-right: 1%; overflow-y: scroll;"
+                                        id="list-items1">
+                                    </div>
+                                </div>
+                                <!-- End show cards -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Editar servicios -->
+        </div>
+        <!--AÑADIR SERVICIO-->
+
+        <!--AÑADIR USUARIO-->
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 ASBtn">
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label for="Nombre-usuario" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="Nombre-usuario"
+                                    aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="apellido-user" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido-user" aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cumpleaños-usuario" class="form-label">Fecha de nacimiento</label>
+                                <input type="text" class="form-control" id="cumpleaños-usuario"
+                                    aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email-usuario" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email-usuario">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Añadir</button>
+                        </form>
+                    </div>
+
+                    <div class="col-8 ContenedorAS2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--AÑADIR USUARIO-->
+    <!--NAVEGACION-->
+
+</div><!--ContenidoControl-->
+
+</div><!-- content -->
+  <!-- ingresar codigo del contact -->
+  <div class="footer">
+    <div class="foo1">
+    <div class="foo2">
+      <i class="fas fa-phone"></i>
+      <a href="#">83-8888-8888</a> 
+    </div><!-- foo2 -->
+    <div class="foo3">
+      <i class="fab fa-whatsapp"></i>
+      <a href="#">(+52) 81-4566-7890</a> 
+    </div><!-- foo3 -->
+    <div class="foo4">
+      <i class="fas fa-envelope"></i>
+      <a href="#">email@divinite.com</a> 
+    </div><!-- foo4 --></div><!-- foo1 -->
+    <div class="foo5">
+    <div class="foo6">
+      <a href="BuzonSugerencias.html"> Buzon de sugerencias</a>
+    </div><!-- foo6 -->
+    <div class="foo7">
+      <p>(c) DIVINITE Guadalajara</p>
+    </div><!-- foo7 -->
+    <div class="foo8">
+      <a href="AvisoPrivacidad.html"> Politica de Privacidad </a>
+      <span></span>
+      <p>  |  </p>
+      <span></span>
+      <a href="#"> FAQs </a>
+    </div><!-- foo8 --></div><!-- foo5 -->
+    <div class="foo9">
+    <div class="foo10">
+      <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p>
+      </div><!-- foo10 -->
+    <div class="foo11">
+      <div class= "MClogo"><img src="/Imagenes/MC_img/MCLogoWhite.svg.png"" alt=""></div>
+    </div><!-- foo11 -->
+  </div><!-- foo9 -->
+  </div><!-- footer -->
+</div><!-- grid -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="/ControlAdmin/CarpetaJS/ServiciosCRUD.js"></script>
+        <!--Fetch-->
+        <script src="/ControlAdmin/CarpetaJS/FetchUsuario.js"></script>
+
+
+</body>
+
+</html>

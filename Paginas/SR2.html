@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVINITE-ServiciosReservados</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="ServiciosReservados2.css" type="text/css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- Logocabecera -->
+    <link rel="shortcut icon" href="/Imagenes/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="grid">
+<!-- ingresar codigo de navbar  -->
+<div class="navbar">
+  <header class="header">
+    <div class="header-top">
+      <div class="LogoEmpresa">
+          <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+          </a>
+      </div><!--LogoEmpresa -->
+      <div class="n3">
+        <div class="nav-links2">
+        <a class = "active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
+        <span></span>
+        <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
+        <span></span>
+        </div><!--nav-links2 -->
+        <div class="header-btn"><i class="fas fa-bars"></i></a></div>
+    </div>
+      </div><!--n3 -->
+    <nav  class="header-menu">
+      <ul>
+        <li><a href="Inicio.html">Inico</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="CatalogoServicios.html">Servicios</a></li>
+        <li><a href="ServiciosReservados.html">Reservados</a></li>
+        <li><a href="BuzonSugerencias.html">Contacto</a></li>
+        <li><a href="CrearCuenta.html">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.header-btn')
+    const header_menu = document.querySelector('.header-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div><!-- navbar -->
+  
+  <!-- codigo de servicios reservados -->
+  <div class="content">
+
+<div class="space1">
+  <a>Servicios Reservados</a>
+</div><!-- space1 -->
+
+<!--NAVEGACION--><!--Filtrado "TODOS-RESERVADO-PROCESO"-->
+<div class="space2"> 
+  <div class="box1"> 
+  <a href="ServiciosReservados.html" class="category_item " category="all"><button class="btn" type="button">Todos</button></a>
+</div><!-- box1 -->
+  <div class="box2"> 
+  <a href="#" class="category_item " category="reservado"><button class="btn" type="button" >Reservados</button></a>
+</div><!-- box2 -->
+</div><!-- space2 -->
+
+<div class="space3"> 
+
+<div class="tarjetereservados">
+<div class="bolsa">
+  <i class="fas fa-shopping-bag"></i>
+</div><!-- bolsa -->
+<div class="titulotarjeta">
+  <p>Tratamiento Nutragel</p>
+</div><!-- titulotarjeta -->
+<div class="precio">
+  <p>Precio: </p>
+  <br>
+  <p style="color: red;">$100.00 </p>
+</div><!-- precio -->
+<div class="fh">
+<div class="fhtitulo">
+  <p>Fecha y hora: </p>
+</div><!-- fhtitulo -->
+<div class="fecha">
+  <input type="text" id="fname" name="fname">
+</div><!-- fecha -->
+<div class="hora">
+  <input type="text" id="fname" name="fname">
+</div><!-- hora -->
+</div><!-- fh -->
+<div class="cd">
+<div class="code">
+  <p>Codigo de Reservado:</p>
+  <input type="text" id="fname" name="fname">
+</div><!-- reservar -->
+<div class="reservar">
+  <button class="botonRes" id="btnReservar" type="button">Modificar</button>
+</div><!-- reservar -->
+</div><!-- cd -->
+</div><!-- tarjetereservados -->
+
+<div class="tarjetereservados">
+  <div class="bolsa">
+    <i class="fas fa-shopping-bag"></i>
+  </div><!-- bolsa -->
+  <div class="titulotarjeta">
+    <p>Tratamiento Nutragel</p>
+  </div><!-- titulotarjeta -->
+  <div class="precio">
+    <p>Precio: </p>
+    <br>
+    <p style="color: red;">$100.00 </p>
+  </div><!-- precio -->
+  <div class="fh">
+  <div class="fhtitulo">
+    <p>Fecha y hora: </p>
+  </div><!-- fhtitulo -->
+  <div class="fecha">
+    <input type="text" id="fname" name="fname">
+  </div><!-- fecha -->
+  <div class="hora">
+    <input type="text" id="fname" name="fname">
+  </div><!-- hora -->
+  </div><!-- fh -->
+  <div class="cd">
+  <div class="code">
+    <p>Codigo de Reservado:</p>
+    <input type="text" id="fname" name="fname">
+  </div><!-- reservar -->
+  <div class="reservar">
+    <button class="botonRes" id="btnReservar" type="button">Modificar</button>
+  </div><!-- reservar -->
+  </div><!-- cd -->
+  </div><!-- tarjetereservados -->
+
+  <div class="tarjetereservados">
+    <div class="bolsa">
+      <i class="fas fa-shopping-bag"></i>
+    </div><!-- bolsa -->
+    <div class="titulotarjeta">
+      <p>Tratamiento Nutragel</p>
+    </div><!-- titulotarjeta -->
+    <div class="precio">
+      <p>Precio: </p>
+      <br>
+      <p style="color: red;">$100.00 </p>
+    </div><!-- precio -->
+    <div class="fh">
+    <div class="fhtitulo">
+      <p>Fecha y hora: </p>
+    </div><!-- fhtitulo -->
+    <div class="fecha">
+      <input type="text" id="fname" name="fname">
+    </div><!-- fecha -->
+    <div class="hora">
+      <input type="text" id="fname" name="fname">
+    </div><!-- hora -->
+    </div><!-- fh -->
+    <div class="cd">
+    <div class="code">
+      <p>Codigo de Reservado:</p>
+      <input type="text" id="fname" name="fname">
+    </div><!-- reservar -->
+    <div class="reservar">
+      <button class="botonRes" id="btnReservar" type="button">Modificar</button>
+    </div><!-- reservar -->
+    </div><!-- cd -->
+    </div><!-- tarjetereservados -->
+
+
+</div><!-- space3 -->
+<div class="space4"> 
+</div><!-- space4 -->
+  </div><!-- content -->
+  <!-- ingresar codigo del contact -->
+  <div class="footer">
+    <div class="foo1">
+    <div class="foo2">
+      <i class="fas fa-phone"></i>
+      <a href="#">83-8888-8888</a> 
+    </div><!-- foo2 -->
+    <div class="foo3">
+      <i class="fab fa-whatsapp"></i>
+      <a href="#">(+52) 81-4566-7890</a> 
+    </div><!-- foo3 -->
+    <div class="foo4">
+      <i class="fas fa-envelope"></i>
+      <a href="#">email@divinite.com</a> 
+    </div><!-- foo4 --></div><!-- foo1 -->
+    <div class="foo5">
+    <div class="foo6">
+      <a href="BuzonSugerencias.html"> Buzon de sugerencias</a>
+    </div><!-- foo6 -->
+    <div class="foo7">
+      <p>(c) DIVINITE Guadalajara</p>
+    </div><!-- foo7 -->
+    <div class="foo8">
+      <a href="AvisoPrivacidad.html"> Politica de Privacidad </a>
+      <span></span>
+      <p>  |  </p>
+      <span></span>
+      <a href="#"> Cultura </a>
+      <span></span>
+      <p>  |  </p>
+      <span></span>
+      <a href="#"> FAQs </a>
+    </div><!-- foo8 --></div><!-- foo5 -->
+    <div class="foo9">
+    <div class="foo10">
+      <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p>
+      </div><!-- foo10 -->
+    <div class="foo11">
+      <div class= "MClogo"><img src="/Imagenes/MC_img/MCLogoWhite.svg.png"" alt=""></div>
+    </div><!-- foo11 -->
+  </div><!-- foo9 -->
+  </div><!-- footer -->
+  </div><!-- grid -->
+  </body>
+  </html>

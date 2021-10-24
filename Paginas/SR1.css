@@ -1,0 +1,295 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
+html, body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+.grid{
+  grid-template-rows: 60px auto auto;
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+/* ingresar codigo de navbar */
+.navbar{
+  grid-row: 1;
+  background:#000000;
+  display: grid; 
+  color: white;
+}
+/* ingresar codigo del contact */
+.footer{
+  grid-row: 3;
+  height: auto;
+}
+/* ingresar codigo del contenido */
+.content{
+  grid-row: 2;
+  display: grid; 
+  grid-template-rows:6rem 3rem auto 4rem ;
+  grid-template-columns: 6% auto 6%;
+  height: auto;
+}
+.space1{
+  display: grid;
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: center;
+  place-self: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: 644747;
+  color: #644747  ;
+}
+.space2{
+  display: grid;
+  grid-row: 2;
+  grid-column: 2;
+  grid-template-columns: 1fr 1fr;
+}
+.btn{
+  cursor: pointer;
+  width: fit-content;
+  background-color: transparent ;
+  color: #644747  ;
+  font-weight: 500;
+  font-size: medium;
+  font-style: bold;
+  border: none;
+}
+.box1{
+  justify-self: center;
+  place-self: center;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #AA3053;
+}
+.box2{
+  justify-self: center;
+  place-self: center;
+}
+.space3{
+  display: grid;
+  grid-row: 3;
+  grid-column: 2;
+  padding: 2rem;
+}
+.tarjetereservados{
+  border: 3px solid black;
+  border-radius: 10px;
+  grid-template-columns: 15% 25% 30% 30%;
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  height: auto;
+}
+.bolsa{
+  grid-column: 1;
+  grid-row: 1/-1;
+  justify-self: center;
+  place-self: center;
+}
+.bolsa i{
+  color: red;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.titulotarjeta{
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  place-self: center;
+  font-weight: 600;
+}
+.precio{
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  place-self: center;
+  display: inline-flex;
+}
+.precio p{
+  margin-right: 10px;
+}
+.fh{
+  grid-column: 3;
+  grid-row: 1/-1;
+  justify-self: center;
+  place-self: center;
+}
+.fecha input{
+  width: 100%;
+  height: 2.5rem;
+  padding: 20px;
+  border-radius: .5rem;
+  font-size: medium;
+  margin-bottom: 10px;
+}
+.fhtitulo{
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.hora input{
+  width: 100%;
+  height: 2.5rem;
+  padding: 20px;
+  border-radius: .5rem;
+  font-size: medium;
+  margin-bottom: 10px;
+}
+.reservar{
+  grid-column: 4;
+  grid-row: 1/-1;
+  justify-self: center;
+  place-self: center;
+}
+.botonRes{
+  cursor: pointer;
+  width: fit-content;
+  height: 2.5rem;
+  background-color: #FD5060 ;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  font-style: bold;
+  border-radius: .9rem;
+  border: none;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.space4{
+  display: grid;
+  grid-row: 4;
+  grid-column: 2;
+  height: 3rem;
+}
+@media screen and (max-width: 900px) {
+  .space1{
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+    place-self: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: 644747;
+    color: #644747  ;
+  }
+  .btn{
+    cursor: pointer;
+    width: fit-content;
+    background-color: transparent ;
+    color: #644747  ;
+    font-weight: 500;
+    font-size: 13px;
+    font-style: bold;
+    border: none;
+  }
+  .space3{
+    display: grid;
+    grid-row: 3;
+    grid-column: 2;
+    padding: 1.5rem;
+  }
+  .tarjetereservados{
+    border: 3px solid black;
+    border-radius: 10px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    display: grid;
+    margin-top: .5rem;
+    margin-bottom: .8rem;
+    height: 20rem;
+  }
+  .bolsa{
+    grid-column: 1;
+    grid-row: 1/3;
+    justify-self: center;
+    place-self: center;
+    padding-left: 1.3rem;
+  }
+  .bolsa i{
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .titulotarjeta{
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    place-self: center;
+    font-weight: 600;
+  }
+  .precio{
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    place-self: center;
+    display: inline-flex;
+  }
+  .precio p{
+    margin-right: 10px;
+  }
+  .fh{
+    grid-column: 1/-1;
+    grid-row: 3;
+    justify-self: center;
+    place-self: center;
+  }
+  .fecha input{
+    width: 100%;
+    height: 2.5rem;
+    padding: 20px;
+    border-radius: .5rem;
+    font-size: medium;
+    margin-bottom: 10px;
+  }
+  .fhtitulo{
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  .hora input{
+    width: 100%;
+    height: 2.5rem;
+    padding: 20px;
+    border-radius: .5rem;
+    font-size: medium;
+    margin-bottom: 10px;
+  }
+  .reservar{
+    grid-column: 1/-1;
+    grid-row: 4;
+    justify-self: center;
+    place-self: center;
+    padding: 1rem;
+  }
+  .botonRes{
+    cursor: pointer;
+    width: fit-content;
+    height: 2.5rem;
+    background-color: #FD5060 ;
+    color: white;
+    font-weight: 500;
+    font-size: large;
+    font-style: bold;
+    border-radius: .9rem;
+    border: none;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .space4{
+    display: grid;
+    grid-row: 4;
+    grid-column: 2;
+    height: 3rem;
+  }
+}

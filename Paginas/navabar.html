@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVINITE-Inicio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="navbar.css">
+    <!-- Logocabecera -->
+    <link rel="shortcut icon" href="/Imagenes/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="grid">
+<!-- ingresar codigo de navbar  -->
+<div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+          <a href="Inicio.html">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+          </a>
+      </div><!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2">
+        <a class = "active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
+        <span></span>
+        <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
+        <span></span>
+        </div><!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+    </div>
+      </div><!--n3 -->
+    <nav  class="headerr-menu">
+      <ul>
+        <li><a href="Inicio.html">Inico</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="CatalogoServicios.html">Servicios</a></li>
+        <li><a href="ServiciosReservados.html">Reservados</a></li>
+        <li><a href="BuzonSugerencias.html">Contacto</a></li>
+        <li><a href="CrearCuenta.html">Ingresar / Cerrar sesion</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div><!-- navbar -->
+
+
+
+</div><!-- grid -->
+
+
+</body>
+</html>

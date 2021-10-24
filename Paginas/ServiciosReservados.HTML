@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIVINITE-ServiciosReservados</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="ServiciosReservados.CSS" type="text/css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- Bootstrap -->
+
+    <!-- Logocabecera -->
+    <link rel="shortcut icon" href="/Imagenes/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="grid">
+<!-- ingresar codigo de navbar  -->
+<div class="navbarr">
+<header class="headerr">
+<div class="headerr-top">
+    <div class="LogoEmpresa">
+        <a href="Inicio.html">
+        <div class="p1">DIVINITE</div>
+        <div class="p2">BEAUTY SPA</div>
+        </a>
+    </div><!--LogoEmpresa -->
+    <div class="n3">
+    <div class="navr-links2">
+    <a class = "active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
+    <span></span>
+    <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
+    <span></span>
+    </div><!--nav-links2 -->
+    <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+</div>
+    </div><!--n3 -->
+<nav  class="headerr-menu">
+    <ul>
+    <li><a href="Inicio.html">Inico</a></li>
+    <li><a href="Nosotros.html">Nosotros</a></li>
+    <li><a href="CatalogoServicios.html">Servicios</a></li>
+    <li><a href="ServiciosReservados.html">Reservados</a></li>
+    <li><a href="BuzonSugerencias.html">Contacto</a></li>
+    <li><a href="CrearCuenta.html">Ingresar / Cerrar sesion</a></li>
+    </ul>
+</nav>
+</header>
+<script>
+const header_btn = document.querySelector('.headerr-btn')
+const header_menu = document.querySelector('.headerr-menu')
+header_btn.addEventListener('click', () => {
+    if (header_menu.style.display != 'block') {
+    header_menu.style.display = 'block'
+    header_btn.innerHTML = '<i class="fas fa-times"></i>'
+    } else {
+    header_menu.style.display = 'none'
+    header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+    }
+})
+</script>
+</div><!-- navbar -->
+
+<!-- codigo de Reservaciones -->
+<div class="content">
+
+<div class="space1">
+<a>Reservaciones</a>
+</div><!-- space1 -->
+
+<div class=" space2">
+<a href="#" class="category_item" category="all" >Todos</a>
+<a href="#" class="category_item" category="Reservado" >Reservados</a>
+<a href="#" class="category_item" category="En proceso" >Por reservar</a>
+
+</div><!-- space2 -->
+
+<!-- Ingresar cartas -->
+<div class="space3">
+
+
+<section class="products-list" >
+    <div class="product-item" category="Reservado" >
+
+        <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;">
+
+
+            <div class="container cuerpoCartaReservados">
+                <div class="row">
+                    <div class="col-5">
+        
+                    <div class="container">
+                        <div class="row">
+                        <div class="col-4">
+                            <div class="contenido1">
+                            <img src="/Icons/Bag_red2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="contenido2">
+                            <h4>Tratamiento Nutragel</h4>
+                            <br>
+                            <h6>Precio: <br><span style="color: red;">$100.00</span></h6><br>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-4">
+                    <form>
+                        <div class="mb-3">
+                        <label>Fecha</label>
+                        <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
+                        </div>
+                        <div class="mb-3">
+        
+                        <label>Hora: <br>
+                            <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
+                            <datalist id="horarioCita">
+                            <option value="9:00">
+                            <option value="9:30">
+                            <option value="10:00">
+                            <option value="10:30">
+                            <option value="11:00">
+                            <option value="11:30">
+                            <option value="12:00">
+                            <option value="12:30">
+                            <option value="13:00">
+                            <option value="13:30">
+                            <option value="14:00">
+                            <option value="14:30">
+                            <option value="15:00">
+                            <option value="15:30">
+                            <option value="16:00">
+                            <option value="16:30">
+                            <option value="17:00">
+                            <option value="17:30">
+                            <option value="18:00">
+                            <option value="18:30">                         
+                            </datalist>
+        
+                        </div>
+                    </form>
+                    </div>
+                    <div class="col-3">
+                    <div class="d-grid gap-2 col-6 mx-auto BotonReservar">
+                        <button class="btn btn-primary botonRes" id="btnReservar" type="button">Reservar</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="products-list" >
+
+    <div class="product-item" category="En proceso" >
+
+        <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;">
+
+
+            <div class="container cuerpoCartaReservados">
+                <div class="row">
+                    <div class="col-5">
+        
+                    <div class="container">
+                        <div class="row">
+                        <div class="col-4">
+                            <div class="contenido1">
+                            <img src="/Icons/Bag_red2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="contenido2">
+                            <h4>Gelish Mate</h4>
+                            <br>
+                            <h6>Precio: <br><span style="color: red;">$180.00</span></h6><br>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-4">
+                    <form>
+                        <div class="mb-3">
+                        <label>Fecha</label>
+                        <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
+                        </div>
+                        <div class="mb-3">
+        
+                        <label>Hora: <br>
+                            <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
+                            <datalist id="horarioCita">
+                            <option value="9:00">
+                            <option value="9:30">
+                            <option value="10:00">
+                            <option value="10:30">
+                            <option value="11:00">
+                            <option value="11:30">
+                            <option value="12:00">
+                            <option value="12:30">
+                            <option value="13:00">
+                            <option value="13:30">
+                            <option value="14:00">
+                            <option value="14:30">
+                            <option value="15:00">
+                            <option value="15:30">
+                            <option value="16:00">
+                            <option value="16:30">
+                            <option value="17:00">
+                            <option value="17:30">
+                            <option value="18:00">
+                            <option value="18:30">                         
+                            </datalist>
+        
+                        </div>
+                    </form>
+                    </div>
+                    <div class="col-3">
+                    <div class="d-grid gap-2 col-6 mx-auto BotonReservar">
+                        <button class="btn btn-primary botonRes" type="button">Reservar</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+
+
+
+
+        </div>
+    </div>
+
+</section>
+
+
+
+</div><!-- space3 -->
+
+<div class="space4">
+
+</div><!-- space4 -->
+</div><!-- content -->
+
+<!-- ingresar codigo del contact -->
+<div class="footer">
+<div class="foo1">
+<div class="foo2">
+    <i class="fas fa-phone"></i>
+    <a href="#">83-8888-8888</a> 
+</div><!-- foo2 -->
+<div class="foo3">
+    <i class="fab fa-whatsapp"></i>
+    <a href="#">(+52) 81-4566-7890</a> 
+</div><!-- foo3 -->
+<div class="foo4">
+    <i class="fas fa-envelope"></i>
+    <a href="#">email@divinite.com</a> 
+</div><!-- foo4 --></div><!-- foo1 -->
+<div class="foo5">
+<div class="foo6">
+    <a href="BuzonSugerencias.html"> Buzon de sugerencias</a>
+</div><!-- foo6 -->
+<div class="foo7">
+    <p>(c) DIVINITE Guadalajara</p>
+</div><!-- foo7 -->
+<div class="foo8">
+    <a href="AvisoPrivacidad.html"> Politica de Privacidad </a>
+    <span></span>
+    <p>  |  </p>
+    <span></span>
+    <a href="#"> FAQs </a>
+</div><!-- foo8 --></div><!-- foo5 -->
+<div class="foo9">
+<div class="foo10">
+    <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p>
+    </div><!-- foo10 -->
+<div class="foo11">
+    <div class= "MClogo"><img src="/Imagenes/MC_img/MCLogoWhite.svg.png"" alt=""></div>
+</div><!-- foo11 -->
+</div><!-- foo9 -->
+</div><!-- footer -->
+</div><!-- grid -->
+</body>
+</html>

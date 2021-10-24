@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVINITE-IngresarCuenta</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="IngresarCuenta.css" type="text/css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- Bootstrap -->
+
+    <!-- Logocabecera -->
+    <link rel="shortcut icon" href="/Imagenes/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="grid">
+<!-- ingresar codigo de navbar  -->
+<div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+          <a href="Inicio.html">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+          </a>
+      </div><!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2">
+        <a class = "active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
+        <span></span>
+        <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
+        <span></span>
+        </div><!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+    </div>
+      </div><!--n3 -->
+    <nav  class="headerr-menu">
+      <ul>
+        <li><a href="Inicio.html">Inico</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="CatalogoServicios.html">Servicios</a></li>
+        <li><a href="ServiciosReservados.html">Reservados</a></li>
+        <li><a href="BuzonSugerencias.html">Contacto</a></li>
+        <li><a href="CrearCuenta.html">Ingresar / Cerrar sesion</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div><!-- navbar -->
+  
+  <!-- codigo de ingresar a cuenta -->
+  <div class="content">
+    
+
+
+    <div class="box1">
+      <div class="logo"></a><img src="/Imagenes/images/logo/image2.png" alt=""></a></div>
+    </div><!-- box1 -->
+    <div class="box2">
+      <a>Ingresar</a>
+    </div><!-- box2 -->
+    <div class="box3 field">
+      <input type="email" name="emails" id="InputEmail" multiple placeholder="Inserte su email" required> 
+    </div><!-- box3 -->
+    <div class="box4 field1">
+      <input type="password" id="Show" placeholder="Contraseña" required>
+    </div><!-- box4 -->
+    <div class="box5 pass-link">
+      <div class="b51">
+      <input type="checkbox" id="" onclick="viewpassword()">Mostrar contraseña
+    </div>
+    <div class="b52">
+      <a href="RecuperarCuenta.html">¿Olvidaste contraseña? </a>
+    </div>
+    </div><!-- box5 -->
+    <div class="box6 checkbox ">
+      <input type="checkbox" id="terms" onchange="openSubmit()">Permanecer conectado
+    </div><!-- box6 -->
+    <div class="box7 btn" id="enter">
+      <!-- <div class="btn-layer"></div> -->
+      <button class="btn-layer" type="button" id="Login">Ingresar</button>
+      <!-- <input type="submit" value="Ingresar">  -->
+    </div><!-- box7 -->
+    <!-- <div class="box8">
+      <div><hr></div>
+      <div class="divisior">
+        <a> Iniciar sesion con: </a>
+      </div>
+      <div class="icon">
+        <div class="iconn"><a href="#"><i class="fab fa-facebook-square"></i></div> 
+        <div class="iconn"><a href="#"><i class="fab fa-google"></i></div> 
+      </div>
+      <div><hr></div>
+    </div>box8 -->
+    <div class="box9 text">
+      <a>¿No tienes cuenta?</a>
+      <div class="signup-link"> <a href="CrearCuenta.html">Crear cuenta </a></div>
+    </div><!-- box9 -->
+    <div class="space">
+    </div>
+
+
+
+
+
+  </div><!-- content -->
+
+  <!-- ingresar codigo del contact -->
+<div class="footer">
+  <div class="foo1">
+  <div class="foo2">
+    <i class="fas fa-phone"></i>
+    <a href="#">83-8888-8888</a> 
+  </div><!-- foo2 -->
+  <div class="foo3">
+    <i class="fab fa-whatsapp"></i>
+    <a href="#">(+52) 81-4566-7890</a> 
+  </div><!-- foo3 -->
+  <div class="foo4">
+    <i class="fas fa-envelope"></i>
+    <a href="#">email@divinite.com</a> 
+  </div><!-- foo4 --></div><!-- foo1 -->
+  <div class="foo5">
+  <div class="foo6">
+    <a href="BuzonSugerencias.html"> Buzon de sugerencias</a>
+  </div><!-- foo6 -->
+  <div class="foo7">
+    <p>(c) DIVINITE Guadalajara</p>
+  </div><!-- foo7 -->
+  <div class="foo8">
+    <a href="AvisoPrivacidad.html"> Politica de Privacidad </a>
+    <span></span>
+    <p>  |  </p>
+    <span></span>
+    <a href="#"> FAQs </a>
+  </div><!-- foo8 --></div><!-- foo5 -->
+  <div class="foo9">
+  <div class="foo10">
+    <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p>
+    </div><!-- foo10 -->
+  <div class="foo11">
+    <div class= "MClogo"><img src="/Imagenes/MC_img/MCLogoWhite.svg.png"" alt=""></div>
+  </div><!-- foo11 -->
+</div><!-- foo9 -->
+</div><!-- footer -->
+  </div><!-- grid -->
+  </body>
+  </html>
