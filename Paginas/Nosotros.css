@@ -593,14 +593,15 @@ html, body{
     grid-column: 2/4;
     place-self: center;
     display: grid;
-    height: 9rem;
+    height: auto;
     width: auto;
-    border: 3px solid #AA3053;
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
   .fcmensaje{
     font-size: 12px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   .space18{
     grid-row: 18;
@@ -609,7 +610,7 @@ html, body{
     margin-top: 2rem;
     margin-bottom: .5rem;
     margin-left: 0;
-  margin-right: 0;
+    margin-right: 0;
   }
   .mapita{
     height: 10rem;
