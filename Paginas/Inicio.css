@@ -14,7 +14,7 @@ html, body{
   width: 100%;
 }
 .grid{
-  grid-template-rows: 60px auto auto;
+  grid-template-rows: 57px auto auto;
   display: grid;
   height: 100%;
   width: 100%;
@@ -23,7 +23,7 @@ html, body{
 /* ingresar codigo de navbar */
 .navbar{
   grid-row: 1;
-  background:#000000;
+  background:black;
   display: grid; 
   color: white;
 }
