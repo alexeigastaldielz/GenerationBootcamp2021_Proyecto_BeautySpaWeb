@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIVINITE-ServiciosReservados</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="ServiciosReservados2.css" type="text/css">
+    <link rel="stylesheet" href="Sr2.css" type="text/css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <!-- Logocabecera -->
@@ -22,50 +22,50 @@
 <body>
   <div class="grid">
 <!-- ingresar codigo de navbar  -->
-<div class="navbar">
-  <header class="header">
-    <div class="header-top">
+<div class="navbarr">
+  <header class="headerr">
+  <div class="headerr-top">
       <div class="LogoEmpresa">
-          <a href="/PaginasHTML/PaginaDeInicio.html">
+          <a href="Inicio.html">
           <div class="p1">DIVINITE</div>
           <div class="p2">BEAUTY SPA</div>
           </a>
       </div><!--LogoEmpresa -->
       <div class="n3">
-        <div class="nav-links2">
-        <a class = "active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
-        <span></span>
-        <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
-        <span></span>
-        </div><!--nav-links2 -->
-        <div class="header-btn"><i class="fas fa-bars"></i></a></div>
-    </div>
+      <div class="navr-links2">
+      <a class = "active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
+      <span></span>
+      <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
+      <span></span>
+      </div><!--nav-links2 -->
+      <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+  </div>
       </div><!--n3 -->
-    <nav  class="header-menu">
+  <nav  class="headerr-menu">
       <ul>
-        <li><a href="Inicio.html">Inico</a></li>
-        <li><a href="Nosotros.html">Nosotros</a></li>
-        <li><a href="CatalogoServicios.html">Servicios</a></li>
-        <li><a href="ServiciosReservados.html">Reservados</a></li>
-        <li><a href="BuzonSugerencias.html">Contacto</a></li>
-        <li><a href="CrearCuenta.html">Ingresar</a></li>
+      <li><a href="Inicio.html">Inico</a></li>
+      <li><a href="Nosotros.html">Nosotros</a></li>
+      <li><a href="CatalogoServicios.html">Servicios</a></li>
+      <li><a href="ServiciosReservados.html">Reservados</a></li>
+      <li><a href="BuzonSugerencias.html">Contacto</a></li>
+      <li><a href="CrearCuenta.html">Ingresar / Cerrar sesion</a></li>
       </ul>
-    </nav>
+  </nav>
   </header>
   <script>
-    const header_btn = document.querySelector('.header-btn')
-    const header_menu = document.querySelector('.header-menu')
-    header_btn.addEventListener('click', () => {
+  const header_btn = document.querySelector('.headerr-btn')
+  const header_menu = document.querySelector('.headerr-menu')
+  header_btn.addEventListener('click', () => {
       if (header_menu.style.display != 'block') {
-        header_menu.style.display = 'block'
-        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      header_menu.style.display = 'block'
+      header_btn.innerHTML = '<i class="fas fa-times"></i>'
       } else {
-        header_menu.style.display = 'none'
-        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      header_menu.style.display = 'none'
+      header_btn.innerHTML = '<i class="fas fa-bars"></i>'
       }
-    })
+  })
   </script>
-</div><!-- navbar -->
+  </div><!-- navbar -->
   
   <!-- codigo de servicios reservados -->
   <div class="content">
